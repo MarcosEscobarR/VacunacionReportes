@@ -30,6 +30,9 @@ namespace VacunadosReporte
             
             services.AddDbContext<VacunadosDBContext>(builder => builder
                 .UseSqlite(Configuration.GetConnectionString("Default")));
+
+            services
+                .AddMemoryCache();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
